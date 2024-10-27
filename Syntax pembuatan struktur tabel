@@ -1,0 +1,8 @@
+npx sequelize-cli model:create --name user --attributes nama_user:string,foto:string,email:string,password:string,role:enum:'{admin,resepsionis,customer}'
+npx sequelize-cli model:create --name pemesanan --attributes nomor_pemesanan:integer,nama_pemesan:string,email_pemesan:string,tgl_pemesanan:date,tgl_checkin:date,tgl_checkout:date,nama_tamu:string,jumlah_kamar:integer,id_tipe_kamar:integer,status_pemesanan:enum:'{baru,checkin,checkout}',id_user:integer
+npx sequelize-cli model:create --name kamar --attributes nomor_kamar:integer,id_tipe_kamar:integer
+npx sequelize-cli model:create --name tipe_kamar --attributes nama_tipe_kamar:string,harga:integer,deskripsi:string,foto:string
+npx sequelize-cli model:create --name detail_pemesanan --attributes id_pemesanan:integer,id_kamar:integer,tgl_akses:date,harga:integer
+
+
+
